@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content=" AI4NextG @ NeurIPS'25">
+    <meta name="twitter:description" content="NeurIPS 2025 Workshop on AI and ML for Next-Generation Wireless Communications and Networking">
+    <meta name="twitter:image" content="https://nips.cc/static/core/img/san_diego_convention_center.jpg">
+    
+    <title>AI4NextG @ NeurIPS 25 - Workshop on AI and ML for Next-Generation Wireless
+Communications and Networking</title>
+
+    <!-- Multiple favicon formats for better support -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/litera/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        .a-table {
+            text-decoration: none !important;
+        }
+
+        .bg-primary {
+            background-color: #232D4B !important;
+        }
+
+        a {
+            color: black;
+            text-decoration: underline;
+        }
+
+        a.no-underline {
+            text-decoration: none;
+        }
+
+        .hero-section {
+            height: auto;
+            min-height: 33vh;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://www.trolleytours.com/wp-content/uploads/2016/06/san-diego-convention-center-1.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+            margin-top: 56px;
+            padding: 2rem 1rem;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            color: #232D4B ;
+            font-weight: bold;
+        }
+
+        .navbar .nav-link {
+            color: #e5720093 ;
+            font-weight: bold;
+        }
+
+        .navbar .nav-link:hover {
+            color: #E57200 !important;
+        }
+
+        .navbar .nav-link.active {
+            color: #E57200 !important;
+        }
+        .mb-0 {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+
+        section {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            scroll-margin-top: 70px; /* Offset for fixed navbar height plus some extra space */
+        }
+
+        body {
+            position: relative;
+        }
+
+        blockquote {
+          margin: 1.5rem 0;
+          padding: 1rem 1.5rem;
+          border-left: 4px solid #dee2e6;
+          background-color: #f8f9fa;
+          font-style: italic;
+          position: relative;
+        }
+
+        .blockquote-modern {
+          border-left: 4px solid #232D4B;
+          background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          border-radius: 0 8px 8px 0;
+        }
+
+        /* Responsive text for mobile screens */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 1.75rem;
+            }
+
+            .hero-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero-section .lead {
+                font-size: 1rem;
+            }
+
+            .hero-section img {
+                max-width: 150px;
+            }
+        }
+
+        /* Extra small screen adjustment */
+        @media (max-width: 576px) {
+            .hero-section h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero-section h2 {
+                font-size: 1.25rem;
+            }
+        }
+
+        h2.headline-underline {
+            color: #232D4B;
+            font-weight: 600;
+            margin-bottom: 30px;
+            border-bottom: 4px solid #E57200;
+            padding-bottom: 10px;
+        }
+
+        .table-responsive {
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .table {
+            margin-bottom: 0;
+        }
+        .time-column {
+            width: 150px;
+            font-weight: 600;
+        }
+        .session-column {
+            width: 200px;
+        }
+        thead.table-dark {
+            background-color: #2c3e50;
+        }
+        .table-dark th {
+            border-color: #34495e;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: rgba(236, 240, 245, 0.5);
+        }
+        .table-hover tbody tr:hover {
+            background-color: rgba(52, 152, 219, 0.1);
+        }
+        .table-secondary {
+            background-color: #ecf0f1 !important;
+            color: #2c3e50;
+            font-style: italic;
+        }
+
+        .orange-text {
+            color: #E57200 !important;
+        }
+
+        .list-item {
+            color: #232D4B !important;
+            font-weight: 300;
+            font-size: 1.3rem;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+
+
+        tbody td {
+            vertical-align: middle;
+            padding: 12px 15px;
+            border-color: #eee;
+        }
+        @media (max-width: 768px) {
+            .time-column, .session-column {
+                width: auto;
+            }
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: #f8f9fa;
+            transition: background-color 0.15s ease-in-out;
+        }
+        .break-row {
+            background-color: #e9ecef;
+            font-weight: bold;
+        }
+        .break-row:hover {
+            background-color: #dee2e6 !important;
+        }
+
+        .lead {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+    <!-- Fixed Navigation Bar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">AI4NextG @ NeurIPS'25</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#description">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cfp">Call for Papers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#speakers">Invited Speakers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Organizers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reviewers">Program Committee</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="text-center">
+            <h1>AI4NextG @ NeurIPS'25</h1>
+            <h2>Workshop on AI and ML for Next-Generation Wireless Communications and Networking</h2>
+            <p class="lead"> <span class="orange-text">San Diego Convention Center, USA - Sat Dec 6th through Sun Dec 7th, 2025</span></p>
+            <img src="https://sites.gatech.edu/research/files/2024/11/logo_neurips.png" alt="NeurIPS Conference Logo" style="max-width: 200px; margin-top: 0px;">
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Description Section with Sidebar -->
+        <div class="row">
+            <div class="col-lg-8">
+                <section id="description">
+                    <h2 class="mb-4 headline-underline">About the Workshop</h2>
+                    <p>The field of wireless communications and networking is undergoing a paradigm shift, driven by the growing potential of Artificial Intelligence (AI) and Machine Learning (ML) to redefine traditional system design principles. This workshop aims to catalyze interest and foster collaboration between the AI/ML and wireless communications communities. The timing of this workshop is especially significant, as the next-generation (NextG) wireless standardization efforts (such as 6G and WiFi 9) are just getting started, with AI-native technologies expected to play a central role across all aspects of the wireless ecosystem – from radio access to network management and edge intelligence. NextG represents a foundational shift in global infrastructure, enabling ultra-fast, low-latency, and intelligent connectivity that will power future applications in AI, robotics, immersive environments, and autonomous systems. These technologies offer unprecedented opportunities to both drive and benefit many applications, from healthcare and transportation to industrial automation and environmental monitoring. The economic and societal implications are vast: NextG networks will underlie trillions in global GDP impact, bridge digital divides, and shape how billions of people interact with technology and each other in the decades to come.</p>
+
+                    <p>Despite the clear promise, a significant disconnect exists between the AI/ML and wireless research communities. AI/ML experts often lack an understanding of the unique physical, algorithmic, and architectural constraints inherent in wireless systems, while wireless researchers tend to adopt generic, off-the-shelf AI/ML models that are not optimized for the intricacies of wireless environments. Wireless environments are inherently dynamic, high-dimensional, and partially observable. These unique characteristics make them ideal testbeds for developing robust learning algorithms, particularly in areas like online learning, reinforcement learning, and in-context learning. At the same time, AI/ML techniques are becoming essential for managing the growing complexity of modern wireless networks, including resource allocation, interference mitigation, and cross-layer optimization. Bridging the gap between the two communities is not only necessary for meaningful technological advances but also critical for realizing the full societal impact of intelligent wireless systems.</p>
+
+                    <p>This workshop aims to bring together researchers and practitioners at the intersection of artificial intelligence (AI), machine learning (ML), and wireless to address the unique challenges andopportunities posed by Next-Generation (NextG) wireless systems. As the 6G era begins to take shape, AI-native designs have emerged as a cornerstone of wireless innovation, with the potential to transform the performance, efficiency, and adaptability of communication systems. The integration of AI/ML is poised to influence every layer of the network stack, from physical-layer signal processing to network control and resource management.</p>
+                </section>
+                
+            </div>
+
+            <div class="col-lg-4 mt-4">
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">News</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <!-- <li class="mb-3">
+                                <div class="small text-muted">May 25, 2025</div>
+                                <div><b>Final deadline extension</b> to May 27, 2025 11.59pm AoE due to popular demand.</div>
+                            </li>
+                            <li class="mb-3">
+                                <div class="small text-muted">May 19, 2025</div>
+                                <div><b>Deadline extended</b> to May 25, 2025 11.59pm AoE due to many requests related to the NeurIPS deadline.</div>
+                            </li>
+                            <li class="mb-3">
+                                <div class="small text-muted">May 09, 2025</div>
+                                <div>Workshop date set: Saturday, July 19, 2025 in Room 215-216.</div>
+                            </li>
+                            <li class="mb-3">
+                                <div class="small text-muted">April 02, 2025</div>
+                                <div>OpenReview <a href="https://openreview.net/group?id=ICML.cc/2025/Workshop/CFAgentic">submission portal</a> now available.</div>
+                            </li> -->
+                            <li class="mb-3">
+                                <div class="small text-muted">July 04, 2025</div>
+                                <div>Workshop proposal accepted at NeurIPS 2025!</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Important Dates</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Paper Submission Deadline
+                                <span class="badge bg-primary">August 22, 2025, 11.59 p.m. AoE</span>
+                            </li>
+                            <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Author Notification
+                                <span class="badge bg-secondary" style="text-decoration: line-through">June 9, 2025</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Camera-Ready Deadline*
+                                <span class="badge bg-secondary" style="text-decoration: line-through">June 27, 2025, 11.59 p.m. AoE</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Workshop Date & Room
+                                <span class="badge bg-primary">Saturday, July 19, 2025</span>
+                            </li> -->
+                        </ul>
+                    </div>
+                    <!-- <div class="card-footer">
+                        <small>* We will import the papers to our website on June 27. The workshop is non-archival and does not have proceedings.</small>
+                    </div> -->
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Relevant Links</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a href="https://nips.cc/Conferences/2025" target="_blank" class="text-decoration-none">
+                                    NeurIPS 2025 Main Conference
+                                    <i class="bi bi-box-arrow-up-right ms-1"></i>
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="https://neurips.cc/Conferences/2015/PaperInformation/AuthorSubmissionInstructions" class="text-decoration-none">
+                                    NeurIPS 2025 Author and Submission Instructions
+                                    <i class="bi bi-box-arrow-up-right ms-1"></i>
+                                </a>
+                            </li>
+                            <!-- <li class="list-group-item">
+                                <a href="" class="text-decoration-none">
+                                    OpenReview Submission Portal
+                                    <i class="bi bi-box-arrow-up-right ms-1"></i>
+                                </a>
+                            </li> -->
+                            <li class="list-group-item">
+                                <a href="mailto:cong@virginia.edu?subject=AI4NextG@NeurIPS25 | <YOUR TOPIC HERE>" class="text-decoration-none">
+                                    E-Mail the organizers
+                                    <i class="bi bi-box-arrow-up-right ms-1"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- <div class="card">
+                    <div class="card-header bg-secondary text-white">
+                        <h5 class="mb-0">Supported by</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <img class="img-thumbnail" style="max-width: 150px;" src="https://aij.ijcai.org/wp-content/uploads/2021/07/ARTINT_Logo2_c_web_more.jpg"/>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <!-- Call for Papers Section -->
+        <section id="cfp">
+            <h2 class="mb-4 headline-underline">Call for Papers</h2>
+                <p>The workshop will cover a broad range of topics that highlight both foundational research and
+                    practical applications of AI/ML in wireless systems. Key themes include, but are not limited to:</p>
+
+                    <ul class="list">
+                        <li class='list-item'>AI-native protocol and architecture design for 6G and WiFi 8/9</li>
+                        <li class='list-item'>Reinforcement learning for dynamic spectrum access and resource allocation</li>
+                        <li class='list-item'>Gen AI and foundation models for physical-layer communication tasks</li>
+                        <li class='list-item'>Online learning and adaptation under real-time and uncertain wireless environments</li>
+                        <li class='list-item'>Data-efficient learning and representation for sparse, high-dimensional wireless signals</li>
+                        <li class='list-item'>AI for network planning, self-optimization, and fault prediction in wireless networks</li>
+                        <li class='list-item'>Cross-layer ML-driven optimizations for joint sensing, control, and communication</li>
+                        <li class='list-item'>Co-design of hardware and ML algorithms for low-power and real-time wireless AI</li>
+                        <li class='list-item'>Trustworthy and explainable AI in high-stakes communication systems</li>
+                    </ul>     
+                <p>
+                    We welcome contributions that push the boundaries at this unique intersection and aim to create
+                    an engaging forum for students, scholars, and practitioners worldwide to share insights, discuss
+                    progress, and chart future directions in this exciting field. We invite <span class="orange-text"><b>technical papers
+                    with up to 6 pages</b></span> each and <span class="orange-text"><b>vision/position papers with up to 4 pages</b></span> each (excluding references
+                    and appendices), reviewed by a workshop program committee.
+                    All <i>double-anonymous</i> submissions must use the NeurIPS 2025 author kit available <a href="https://icml.cc/Conferences/2025/AuthorInstructions">here</a>.
+                    The review process will be facilitated via OpenReview. Please make sure every author has an OpenReview account ahead of submission.
+                    The submission portal will be available soon.
+                    <!-- The submission portal can be found <a href="https://openreview.net/group?id=ICML.cc/2025/Workshop/CFAgentic">here</a>. -->
+                </p>
+                <p>
+                    Accepted papers will be accessible via this website ahead of the workshop. <span class="orange-text"><b>Our workshop is non-archival and there are no formal proceedings.</b></span>
+                    We allow submissions of manuscripts that have not been accepted by an archival conference, i.e., if your paper is in submission with an archival conference/journal at the time of the workshop submission deadline you are welcome to submit to AI4NextG.
+                </p>
+        </section>
+
+        <!-- Invited Speakers Section -->
+        <section id="speakers">
+            <h2 class="mb-4 headline-underline">Invited Speakers (Tentative)</h2>
+            <!-- <p class="lead">We are looking forward to hosting an exciting set of invited speakers from diverse research backgrounds!</p> -->
+
+            <p>We are looking forward to hosting an exciting set of invited speakers from diverse research backgrounds!</p>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col d-flex">
+                    <div class="card speaker-card w-100">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"><a href="https://www.vanderschaar-lab.com/prof-mihaela-van-der-schaar/" target="_blank" class="no-underline">Mihaela van der Schaar</a></h5>
+                            <h6 class="card-subtitle mb-2 text-muted">John Humphrey Plummer Professor, University of Cambridge</h6>
+                            <p class="card-text mt-auto"><strong>Topic area:</strong> Machine Learning, artificial intelligence and medicine.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col d-flex">
+                    <div class="card speaker-card w-100">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"><a href="https://winslab.lids.mit.edu/people/55/" target="_blank" class="no-underline">Moe Win</a></h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Robert R. Taylor Professor, MIT</h6>
+                            <p class="card-text mt-auto"><strong>Topic area:</strong> Ultra-wideband systems, network localization and navigation, network interference exploitation, and quantum information science.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col d-flex">
+                    <div class="card speaker-card w-100">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"><a href="https://engineering.yale.edu/research-and-faculty/faculty-directory/leandros-tassiulas" target="_blank" class="no-underline">Leandros Tassiulas</a></h5>
+                            <h6 class="card-subtitle mb-2 text-muted">John C. Malone Professor, Yale
+                                University</h6>
+                            <p class="card-text mt-auto"><strong>Topic area:</strong> Computer and communication networks.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col d-flex">
+                    <div class="card speaker-card w-100">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"><a href="https://jing-yang7.github.io" target="_blank" class="no-underline">Jing Yang</a></h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Associate Professor, University of Virginia</h6>
+                            <p class="card-text mt-auto"><strong>Topic area:</strong> Machine learning, wireless communications and networking, and information theory.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col d-flex">
+                    <div class="card speaker-card w-100">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"><a href="https://blogs.juniper.net/author/bob-friday" target="_blank" class="no-underline">Bob Friday</a></h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Chief AI Officer, Juniper Networks</h6>
+                            <!-- <p class="card-text mt-auto"><strong>Topic area:</strong> Computer and communication networks.</p> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col d-flex">
+                    <div class="card speaker-card w-100">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"><a href="https://scholar.google.com/citations?user=-LfTIi4AAAAJ&hl=en" target="_blank" class="no-underline">Taesang Yoo</a></h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Sr. Director of Technology, Qualcomm</h6>
+                            <!-- <p class="card-text mt-auto"><strong>Topic area:</strong> Computer and communication networks.</p> -->
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+            
+        </section>
+
+
+        <!-- Schedule Section -->
+
+
+
+
+
+
+        <!-- Organizing Team Section -->
+        <section id="team">
+            <h2 class="mb-4 headline-underline">Organizers</h2>
+
+            
+
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-4 d-flex align-items-center justify-content-center">
+                                <img src="https://cshen317.github.io/Cong.jpeg" class="img-fluid rounded-start object-fit-cover" style="width:180px;height:180px">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body d-flex flex-column h-100 justify-content-center">
+                                    <h5 class="card-title"><a href="https://cshen317.github.io" target="_blank" class="no-underline">Cong Shen</a></h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Associate Professor, University of Virginia</h6>
+                                    <h6 class="card-text mb-2 "><strong><span class="orange-text">Lead Organizer</span></strong></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="row g-0 h-100"> 
+                            <div class="col-md-4 d-flex align-items-center justify-content-center">
+                                <img src="static/organizers/Brinton.jpg" class="img-fluid rounded-start object-fit-cover" style="width:180px;height:180px">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body d-flex flex-column h-100 justify-content-center">
+                                    <h5 class="card-title"><a href="https://www.cbrinton.net/index.html" target="_blank" class="no-underline">Christopher G. Brinton</a></h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Associate Professor, Purdue University</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-4 d-flex align-items-center justify-content-center">
+                                <img src="https://www.andrew.cmu.edu/user/gaurij/gj_pic_2022.png" class="img-fluid rounded-start object-fit-cover" style="width:180px;height:180px">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body d-flex flex-column h-100 justify-content-center">
+                                    <h5 class="card-title"><a href="https://www.andrew.cmu.edu/user/gaurij/" target="_blank" class="no-underline">Gauri Joshi</a></h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Associate Professor, Carnegie Mellon University</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-4 d-flex align-items-center justify-content-center">
+                                <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=uK5wa_EAAAAJ&citpid=12" class="img-fluid rounded-start object-fit-cover" style="width:180px;height:180px">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body d-flex flex-column h-100 justify-content-center">
+                                    <h5 class="card-title"><a href="https://sites.utexas.edu/hkim/people/" target="_blank" class="no-underline">Hyeji Kim</a></h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Associate Professor, University of Texas at Austin</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-4 d-flex align-items-center justify-content-center">
+                                <img src="static/organizers/osvaldo.jpg" class="img-fluid rounded-start object-fit-cover" style="width:180px;height:180px">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body d-flex flex-column h-100 justify-content-center">
+                                    <h5 class="card-title"><a href="https://sites.google.com/view/osvaldosimeone/home" target="_blank" class="no-underline">Osvaldo Simeone</a></h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Professor, King's College London</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-4 d-flex align-items-center justify-content-center">
+                                <img src="https://shiqiang.wang/authors/admin/avatar_hua4aad4cea71926d9b2a85b8f62245426_364232_270x270_fill_q75_lanczos_center.jpg" class="img-fluid rounded-start object-fit-cover" style="width:180px;height:180px">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body d-flex flex-column h-100 justify-content-center">
+                                    <h5 class="card-title"><a href="https://shiqiang.wang" target="_blank" class="no-underline">Shiqiang Wang</a></h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">IBM Research, USA</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-4 d-flex align-items-center justify-content-center">
+                                <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=-LfTIi4AAAAJ&citpid=1" class="img-fluid rounded-start object-fit-cover" style="width:180px;height:180px" >
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body d-flex flex-column h-100 justify-content-center">
+                                    <h5 class="card-title"><a href="https://scholar.google.com/citations?user=-LfTIi4AAAAJ&hl=en" target="_blank" class="no-underline">Taesang Yoo</a></h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Senior Director of Technology, Wireless R&D Qualcomm Research, USA</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-4 d-flex align-items-center justify-content-center">
+                                <img src="https://eejzhang.people.ust.hk/document/JunZhang.jpg" class="img-fluid rounded-start object-fit-cover" style="width:180px;height:180px" >
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body d-flex flex-column h-100 justify-content-center">
+                                    <h5 class="card-title"><a href="https://eejzhang.people.ust.hk" target="_blank" class="no-underline">Jun Zhang</a></h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Associate Professor, Hong Kong University of Science and Technology</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </section>
+
+        <section id="reviewers">
+            <h2 class="mb-4 headline-underline">Program Committee</h2>
+            <p>TBD</p>
+            <!-- <ul class="list">
+                <li class='list-item'>Matteo Zecchin (EURECOM)</li>
+                <li class='list-item'>Ravi Tandon (University of Arizona)</li>
+                <li class='list-item'>Deniz Gunduz (Imperial College London)</li>
+                <li class='list-item'>Francesco Restuccia (Northeastern University)</li>
+                <li class='list-item'>Wolfgang Utschick (Technical University of Munich)</li>
+                <li class='list-item'>Hao Ye (University of California, Santa Cruz)</li>
+                <li class='list-item'>Yulin Shao (University of Hong Kong)</li>
+                <li class='list-item'>Eren Balevi (Qualcomm)</li>
+                <li class='list-item'>Nikolaos Pappas (Linköping University)</li>
+                <li class='list-item'>Yuanming Shi (ShanghaiTech University)</li>
+                <li class='list-item'>Kaushik Chowdhury (UT Austin)</li>
+                <li class='list-item'>Stratis Ioannidis (Northeastern)</li>
+                <li class='list-item'>Ori Shental (Qualcomm – Wireless R&amp;D Research &amp; Columbia University)</li>
+                <li class='list-item'>Yitao Chen (Qualcomm – Wireless R&amp;D Research)</li>
+                <li class='list-item'>Srinivas Yerramalli (Qualcomm – Wireless R&amp;D Research)</li>
+                <li class='list-item'>Mahmoud Taherzadeh Boroujeni (Qualcomm – Wireless R&amp;D Research)</li>
+                <li class='list-item'>Arash Behboodi (Qualcomm – AI Research)</li>
+                <li class='list-item'>Tribhuvanesh Orekondy (Qualcomm – AI Research)</li>
+                <li class='list-item'>Sewoong Oh (University of Washington at Seattle)</li>
+                <li class='list-item'>Jihong Park (Singapore University of Technology and Design)</li>
+                <li class='list-item'>Pramod Viswanath (Princeton University)</li>
+                <li class='list-item'>Junghyun Bae (Samsung Electronics)</li>
+                <li class='list-item'>Chengshuai Shi (Bloomberg AI)</li>
+                <li class='list-item'>Ruiquan Huang (The Pennsylvania State University)</li>
+                <li class='list-item'>Seyyedali Hosseinialipour (University at Buffalo)</li>
+                <li class='list-item'>Wenfeng Wang (Juniper Networks)</li>
+            </ul>         -->
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4 mt-5">
+        <div class="container">
+            <div class="text-center">
+                <p>&copy; 2025 Workshop on AI and ML for Next-Generation Wireless Communications and Networking (AI4NextG @ NeurIPS'25) Organizers. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
